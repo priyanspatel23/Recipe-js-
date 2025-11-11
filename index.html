@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Explorer</title>
+    <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body>
+
+  <!-- Header with logo + search -->
+  <header>
+    <div class="logo-area">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Burger Icon" />
+      <h1>Recipe Explorer</h1>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search recipe..." />
+      <button id="searchBtn">Search</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </header>
+
+  <div id="loader">Loading recipes...</div>
+  <div id="recipeContainer"></div>
+
+  <footer>© 2025 Recipe Explorer | Powered by dummyjson.com</footer>
+
+  <!-- Modal -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img id="modalImg" src="" alt="Recipe Image" />
+      <h2 id="modalTitle"></h2>
+      <p><strong>Difficulty:</strong> <span id="modalDifficulty"></span></p>
+      <p><strong>Meal Type:</strong> <span id="modalMealType"></span></p>
+      <h4>🧂 Ingredients:</h4>
+      <ul class="ingredients" id="modalIngredients"></ul>
+      <h4>👩‍🍳 Instructions:</h4>
+      <p id="modalInstructions"></p>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

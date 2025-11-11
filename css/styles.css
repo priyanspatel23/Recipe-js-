@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #fffaf4;
+      color: #333;
+    }
+
+    /* Header with Logo + Search */
+    header {
+      background: #f9a825;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 15px 25px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-area img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .logo-area h1 {
+      font-size: 1.5rem;
+      color: #3b2e06;
+      font-weight: 600;
+    }
+
+    /* Search in header */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .search-bar input {
+      padding: 8px 15px;
+      width: 220px;
+      border: 2px solid #ffb347;
+      border-radius: 25px;
+      outline: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .search-bar input:focus {
+      border-color: #e07a2d;
+      box-shadow: 0 0 5px rgba(224, 122, 45, 0.5);
+    }
+
+    .search-bar button {
+      background: #e07a2d;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .search-bar button:hover {
+      background: #ff7b00;
+    }
+
+    /* Grid for recipes */
+    #recipeContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 30px 40px;
+      justify-items: center;
+    }
+
+    .recipe {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .recipe:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .recipe img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .recipe-info {
+      padding: 15px;
+    }
+
+    .recipe-info h3 {
+      font-size: 20px;
+      color: #e07a2d;
+      margin-bottom: 8px;
+    }
+
+    .recipe-info p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ffeabf;
+      font-size: 14px;
+      color: #4a3b2a;
+    }
+
+    #loader {
+      text-align: center;
+      padding: 40px;
+      font-size: 18px;
+      color: #e07a2d;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #e07a2d;
+      font-weight: bold;
+    }
+
+    .close-btn:hover {
+      color: #ff7b00;
+    }
+
+    .ingredients {
+      margin-top: 10px;
+    }
+
+    .ingredients li {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    h2, h4 {
+      color: #e07a2d;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .search-bar {
+        justify-content: center;
+        width: 100%;
+      }
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
